@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 90%;
+    padding: 0px;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+figure {
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.header {
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-logo h1 {
+    font-size: 30px;
+}
+
+.header-logo h1:hover {
+    animation-name: header-title-anim;
+    animation-duration: .1s;
+    animation-fill-mode: forwards;
+}
+
+.header-nav {
+    font-size: 18px;
+}
+
+.header-nav a:nth-of-type(1):hover {
+    animation-name: header-title-anim;
+    animation-duration: .1s;
+    animation-fill-mode: forwards;
+}
+
+.header-nav a:nth-of-type(2):hover {
+    animation-name: header-title-anim;
+    animation-duration: .1s;
+    animation-fill-mode: forwards;
+}
+
+.header-nav a {
+    margin: 5px;
+    font-size: 20px;
+}
+
+.articles-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card-container {
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.card-name-container {
+    margin-left: 5px;
+}
+
+.footer {
+    border-top: 1px solid black;
+    margin-top: 20px;
+}
+
+.footer-container figure {
+    width: 25px;
+}
+
+.footer-container img {
+    width: 100%;
+}
+
+.footer-container a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.footer-container span {
+    margin-right: 5px;
+}
+
+.card-container:hover {
+    animation-name: card-container-anim;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes card-container-anim {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes header-title-anim {
+    from {
+        text-decoration: none;
+    }
+    to {
+        text-decoration: underline;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .main-header {
+        display: flex;
+        flex-direction: column;
+    }
+}
